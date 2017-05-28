@@ -15,6 +15,8 @@ import { DetallePaises } from '../pages/detalle-paises/detalle-paises';
 import {MiServicio} from '../providers/mi-servicio';
 import { HttpModule } from '@angular/http';
 import {DetallePais} from '../pages/detalle-pais/detalle-pais';
+import { AgmCoreModule } from 'angular2-google-maps/core';
+import {PaisEnMapa} from '../pages/pais-en-mapa/pais-en-mapa';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,16 @@ import {DetallePais} from '../pages/detalle-pais/detalle-pais';
     HomePage,
     TabsPage,
     DetallePaises,
-    DetallePais
+    DetallePais,
+    PaisEnMapa
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyA1DHRuo02hKYjdhODQgaENNVpiQN8_W24'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +45,8 @@ import {DetallePais} from '../pages/detalle-pais/detalle-pais';
     HomePage,
     TabsPage,
     DetallePaises,
-    DetallePais
+    DetallePais,
+    PaisEnMapa
   ],
   providers: [
     StatusBar,

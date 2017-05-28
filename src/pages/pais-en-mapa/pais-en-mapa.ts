@@ -13,8 +13,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'pais-en-mapa.html',
 })
 export class PaisEnMapa {
-
+  public pais;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.pais = this.navParams.get("objetoPais");    
+    console.log("pais:" + this.pais);
   }
 
   ionViewDidLoad() {
