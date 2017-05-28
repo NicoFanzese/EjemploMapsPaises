@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Paises</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngFor="let pais of paises" (click)="irADetalle(pais)">
+    <ion-card-header>
+      {{pais.name}}
+    </ion-card-header>
+
+    <ion-card-content>
+      {{pais.region}}
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
+
+
